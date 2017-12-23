@@ -52,11 +52,10 @@ imageViewer = ImageViewer.newInstance()
      viewData.height = autoGridView.getChildAt(j).getMeasuredHeight();  
      mViewDatas.add(viewData);
  }
- imageViewer.beginIndex(i)
- 
-    .viewData(mViewDatas)
-    
-    .show(context);
+ imageViewer
+ .beginIndex(i)
+ .viewData(mViewDatas)
+ .show(context);
 
 
 方法详解:
@@ -64,17 +63,13 @@ imageViewer = ImageViewer.newInstance()
 ImageViewer.newInstance()  
 
              // 点击的图片的序号（必填）            
-             .beginIndex(int index)
-             
+             .beginIndex(int index)        
              // 点击的图片（非必填，一般不建议使用，主要是为了防止显示动画获取不到图像）           
-             .beginView(ImageView view)
-             
+             .beginView(ImageView view)             
              // 图片数据          
-             .imageData(ArrayList<Object> imageData)
-             
+             .imageData(ArrayList<Object> imageData)             
              // ImageView在当前Activity中的位置信息和尺寸信息         
-             .viewData(ArrayList<ViewData> viewDatas)
-             
+             .viewData(ArrayList<ViewData> viewDatas)          
              // 图片加载时的效果（采用的是glide4.1）   
              .options(RequestOptions options)
              // 图片加载时是否显示进度条（默认显示）
