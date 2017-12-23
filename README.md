@@ -5,8 +5,8 @@
 
 
 Step 1:
-
    allprojects {
+
        repositories {
            maven { url 'https://jitpack.io' }
        }
@@ -20,32 +20,36 @@ Step 2:
     
     
 使用方法
+
 Step 1:
 
 在AndroidManifest.Xml中注册ImagePreviewActivity 例如：
-
    <activity
-            android:name="com.lingdle.qx.image_viewer.ImagePreviewActivity"         
-            android:launchMode="singleTask"          
+
+            android:name="com.lingdle.qx.image_viewer.ImagePreviewActivity"
+            android:launchMode="singleTask"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-            
+
 Step 2:
 
+
 imageViewer = ImageViewer
+
                 .newInstance()
                 .indexPos(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL)
                 .imageData(mImageDatas);
-                
-                
+
+
  for (int j = 0; j < autoGridView.getChildCount(); j++) {
-     int[] location = new int[2]; // 获取在整个屏幕内的绝对坐标    
-     autoGridView.getChildAt(j).getLocationOnScreen(location);     
-     ViewData viewData = new ViewData();    
+
+     int[] location = new int[2]; // 获取在整个屏幕内的绝对坐标
+     autoGridView.getChildAt(j).getLocationOnScreen(location);
+     ViewData viewData = new ViewData();
      viewData.x = location[0];
-     // 此处注意，如果`ImagePreviewActivity`使用全屏，而当前所在的Activity的状态栏独自占有高度，则还要减去状态栏的高度    
-     viewData.y = location[1];    
-     viewData.width = autoGridView.getChildAt(j).getMeasuredWidth();   
-     viewData.height = autoGridView.getChildAt(j).getMeasuredHeight();  
+     // 此处注意，如果`ImagePreviewActivity`使用全屏，而当前所在的Activity的状态栏独自占有高度，则还要减去状态栏的高度
+     viewData.y = location[1];
+     viewData.width = autoGridView.getChildAt(j).getMeasuredWidth();
+     viewData.height = autoGridView.getChildAt(j).getMeasuredHeight();
      mViewDatas.add(viewData);
  }
  imageViewer
@@ -57,6 +61,7 @@ imageViewer = ImageViewer
 方法详解:
 
 ImageViewer.newInstance()  
+
              // 点击的图片的序号（必填）            
              .beginIndex(int index)        
              // 点击的图片（非必填，一般不建议使用，主要是为了防止显示动画获取不到图像）           
