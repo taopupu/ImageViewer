@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
         init();
     }
 
+    //简单的测试
     private void init() {
         ImageView img1 = findViewById(R.id.image1);
         ImageView img2 = findViewById(R.id.img2);
