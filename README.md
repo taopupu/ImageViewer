@@ -51,6 +51,7 @@ imageViewer = ImageViewer
      viewData.height = autoGridView.getChildAt(j).getMeasuredHeight();  
      mViewDatas.add(viewData);
  }
+ 
  imageViewer
  .beginIndex(i)
  .viewData(mViewDatas)
