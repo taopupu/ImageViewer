@@ -5,9 +5,8 @@
 
 
 Step 1:
-
-
    allprojects {
+   
        repositories {
            maven { url 'https://jitpack.io' }
        }
@@ -27,21 +26,18 @@ Step 1:
 
 在AndroidManifest.Xml中注册ImagePreviewActivity 例如：
 
-   <activity
-   
+<activity
+
             android:name="com.lingdle.qx.image_viewer.ImagePreviewActivity"         
             android:launchMode="singleTask"          
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
             
 Step 2:
-
-
 imageViewer = ImageViewer
 
                 .newInstance()
                 .indexPos(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL)
                 .imageData(mImageDatas);
-                
                 
  for (int j = 0; j < autoGridView.getChildCount(); j++) {
  
