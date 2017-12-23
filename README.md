@@ -35,7 +35,8 @@ Step 1:
 Step 2:
 
 
-imageViewer = ImageViewer.newInstance()
+imageViewer = ImageViewer
+                .newInstance()
                 .indexPos(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL)
                 .imageData(mImageDatas);
                 
