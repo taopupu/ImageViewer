@@ -6,8 +6,8 @@
 
 Step 1:
    allprojects {
+   
        repositories {
-           ...
            maven { url 'https://jitpack.io' }
        }
     }
@@ -27,6 +27,7 @@ Step 1:
 在AndroidManifest.Xml中注册ImagePreviewActivity 例如：
 
    <activity
+   
             android:name="com.lingdle.qx.image_viewer.ImagePreviewActivity"         
             android:launchMode="singleTask"          
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
@@ -40,6 +41,7 @@ imageViewer = ImageViewer.newInstance()
                 
                 
  for (int j = 0; j < autoGridView.getChildCount(); j++) {
+ 
      int[] location = new int[2]; // 获取在整个屏幕内的绝对坐标    
      autoGridView.getChildAt(j).getLocationOnScreen(location);     
      ViewData viewData = new ViewData();    
