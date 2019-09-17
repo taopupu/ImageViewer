@@ -23,10 +23,9 @@ Step 2:
 
 Step 1:
 
-在AndroidManifest.Xml中注册ImagePreviewActivity 
-例如：
-
+在AndroidManifest.Xml中注册ImagePreviewActivity 例如：
    <activity
+   
             android:name="com.lingdle.qx.image_viewer.ImagePreviewActivity"
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
